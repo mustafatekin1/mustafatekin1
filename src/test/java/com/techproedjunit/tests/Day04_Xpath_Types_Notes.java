@@ -1,4 +1,4 @@
-package com.techproedjunit;
+package com.techproedjunit.tests;
 
 public class Day04_Xpath_Types_Notes {
     /*

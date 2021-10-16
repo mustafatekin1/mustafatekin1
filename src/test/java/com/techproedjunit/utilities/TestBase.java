@@ -18,8 +18,8 @@ public abstract class TestBase {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);//must
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);//optional
+        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);//must
+        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);//optional
     }
 
     @After // later we will add reports in here also

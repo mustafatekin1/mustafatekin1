@@ -1,4 +1,4 @@
-package com.techproedjunit;
+package com.techproedjunit.tests;
 
 import java.util.Date;
 

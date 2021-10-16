@@ -1,5 +1,6 @@
-package com.techproedjunit;
+package com.techproedjunit.tests;
 
+import com.techproedjunit.utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -13,26 +14,24 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
-public class Day08_Actions4 {
+public class Day08_Actions4 extends TestBase {
     /*
     task: create scrollUpDown() method
     - go to https://www.amazon.com
     -
   */
-
-    WebDriver driver;
-    @Before
-    public void start(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-
-        driver.get("https://www.amazon.com");
-
-    }
+        // i comment out the following codes because I extend this class to TestBase class in utilities.
+//    WebDriver driver;
+//    @Before
+//    public void start(){
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        driver.manage().window().maximize();
+//    }
     @Test
     public void scrollUpDown() throws InterruptedException {
+        driver.get("https://www.amazon.com");
         Actions actions = new Actions(driver);
 
         actions.sendKeys(Keys.PAGE_DOWN).perform(); // scrolls about a page like page-down
@@ -49,9 +48,9 @@ public class Day08_Actions4 {
 
     }
 
-    @After
-    public void teardown(){
-        driver.quit();
-    }
+//    @After
+//    public void teardown(){
+//        driver.quit();
+//    }
 
 }

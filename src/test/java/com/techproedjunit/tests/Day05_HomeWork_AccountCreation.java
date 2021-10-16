@@ -1,4 +1,4 @@
-package com.techproedjunit;
+package com.techproedjunit.tests;
 
 public class Day05_HomeWork_AccountCreation {
       /* Create account functionality testing:

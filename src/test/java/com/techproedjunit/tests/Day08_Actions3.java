@@ -1,5 +1,6 @@
-package com.techproedjunit;
+package com.techproedjunit.tests;
 
+import com.techproedjunit.utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
@@ -13,27 +14,16 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
-public class Day08_Actions3 {
+public class Day08_Actions3 extends TestBase {
     /*
     task: create keysUpDown() method
     - go to https://www.google.com
     - send iphone x prices,  send lowercase --> uppercase and vice a versa
     - Highligh the search box by double clicking
   */
-
-    WebDriver driver;
-    @Before
-    public void start(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-
-        driver.get("https://www.google.com");
-
-    }
     @Test
     public void keysUpDown() {
+        driver.get("https://www.google.com");
         WebElement searchBox = driver.findElement(By.xpath("//input[@name='q']"));
 
         //searchBox.sendKeys("iPhone X prices");
@@ -48,9 +38,5 @@ public class Day08_Actions3 {
 
     }
 
-    @After
-    public void teardown(){
-        driver.quit();
-    }
 
 }
