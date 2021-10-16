@@ -26,6 +26,7 @@ public class Day04_Xpath_Search {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     // This IMPLICIT wait means wait 30 secs "WHEN NEEDED" OTHERWISE PROCEED
     // IMPLICIT wait is coming from selenium unlike Thread.sleep
+    // When we just use once it is enough for the driver to wait anytime required.
     /* WHY WAIT IS NEEDED?
         - The website maybe slow due to videos, images etc
         - The internet or local computer is slow

@@ -50,21 +50,16 @@ https://www.facebook.com/ then click on create new account
 (//input[starts-with(@id, 'u_')])[1]
 (//*[contains(@id, 'u_')])[1]   ==> we can use others (starts-with, ends-with) also
 
-     */
+*** We can add multiple attributes with "or" , "and".
+https://www.facebook.com/ then click on create new account
+Lets locate first name with multiple attributes
+//*[@type='text' and @data-type='text' and @tabindex='0']
+
+Lets locate male radio button with multiple attributes
+//*[@type='radio' and @value='2']
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 }
